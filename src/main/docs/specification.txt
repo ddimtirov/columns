@@ -1,0 +1,36 @@
+RAW-ITEMS are a set of uniform tupples (could be derived from beans or maps).
+
+ITEM-GROUPS are a list of sets of raw items,
+    derived by a GROUPING STRATEGY and
+    ordered by a SORTING STRATEGY that can be controlled by user.
+
+SELECTION is a subset of the group-list, specified by USER GESTURES.
+Selection is usually flattened and used to derive a descendent slice.
+
+SELECTION-PIN is a strategy for maintaining the selection when the raw-data changes.
+Pins can maintain the selection
+    by index (first-N or last-N),
+    by sorted position index (first/last-N after sorting with certain comparator),
+    by value (positive and negative filtering),
+    composite (this and that, but not that) or
+    unpinned (raw-data changes nuke the selection).
+
+SLICE-TREE visualizes SLICE-BRANCHES graph in a columnar layout and serves as BRANCH factory.
+Slice tree might have defaults strategy, determining the grouper, sorter and pinning for a new slice. 
+
+SLICE-VIEW visualizes the whole item-groups list of a BRANCH, usualy using a JList or JTable widget.
+
+SLICE-RENDERER renders a single item-group, possibly via JLabel or
+    drawing directly on a JComponent canvas.
+
+------------------------------------------------------------------------------------
+
+Each column can also be split in a SLICE-BRANCH to explore different selections.
+By default there is only a single branch.
+All branches share the same raw-data, but the selection output is independent.
+
+Each branch can be split in multiple SLICE-PROJECTIONS to explore the same dataset
+    using different groupers, sorters and presenters.
+All projections have simple selection-pin strategy and their outputs are merged
+    using a composite-selection-pin.
+

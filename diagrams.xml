@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diagrams>
+  <diagram name="Branch">
+    <command command-class="de.frag.umlplugin.uml.command.AddClassCommand" psi-class="columns.model.Branch" />
+    <command command-class="de.frag.umlplugin.uml.command.AddClassCommand" psi-class="columns.model.SelectionPin" />
+    <command command-class="de.frag.umlplugin.uml.command.AddClassCommand" psi-class="columns.model.Slice" />
+    <command command-class="de.frag.umlplugin.uml.command.AddClassCommand" psi-class="columns.model.SelectionPins" />
+    <command command-class="de.frag.umlplugin.uml.command.AddClassCommand" psi-class="columns.model.SelectionPins.NukeOnChange" />
+    <command command-class="de.frag.umlplugin.uml.command.ConnectClassesCommand" />
+    <compartment-visibility />
+  </diagram>
+</diagrams>
+

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local-project language="java" version="3.3.586" flavor="j2se">
+   <property name="hide-externals" value="true" />
+   <property name="detail-mode" value="true" />
+   <classpath>
+      <classpathentry kind="lib" path="C:\sandbox\columns\target\classes" />
+   </classpath>
+   <sourcepaths>
+      <pathentry type="file" path="C:\sandbox\columns\src\main\java" />
+   </sourcepaths>
+   <grid-set sep="." version="3.3.586">
+      <grid name="Layering" enforce="true" strict="true">
+         <row>
+            <cell vexpanded="true" visibility="public">
+               <grid>
+                  <row>
+                     <cell name="comparators" pattern="columns.comparators.?" vexpanded="true" visibility="public" bgcolor="255,204,102" />
+                  </row>
+                  <row>
+                     <cell vexpanded="true" visibility="public">
+                        <grid>
+                           <row>
+                              <cell name="view" pattern="columns.view.?" vexpanded="true" visibility="public" bgcolor="255,204,102" />
+                           </row>
+                           <row>
+                              <cell name="javax.swing" pattern="javax.swing.*" vexpanded="true" visibility="public" />
+                           </row>
+                        </grid>
+                     </cell>
+                     <cell name="model" pattern="columns.model.?" vexpanded="true" visibility="public" bgcolor="255,204,102" />
+                  </row>
+                  <row>
+                     <cell name="ca.odell.glazedlists" pattern="ca.odell.glazedlists.*" vexpanded="true" visibility="public" />
+                  </row>
+               </grid>
+            </cell>
+            <cell name="columns" pattern="columns.*" vexpanded="true" visibility="public" />
+         </row>
+         <override source="$GP0.0$GP1.0$GP0.0" target="$GP0.0$GP1.1" allowed="true" source_disp="view" target_disp="model" synthetic="false" num-violations="0" num-violations-weighted="0" />
+         <description>Top-level breakout (depth=3)</description>
+      </grid>
+   </grid-set>
+</local-project>
+
